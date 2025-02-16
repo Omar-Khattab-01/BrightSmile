@@ -544,35 +544,35 @@ footer {
 }
 
 #homepage {
-    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/homepage.jpg');
+    background:  url('img/homepage.jpg');
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
 }
 
 #services {
-    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/services.jpg');
+    background:  url('img/services.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #contact {
-    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/contact.jpg');
+    background:  url('img/contact.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #book {
-    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/book.jpg');
+    background:  url('img/book.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #aboutus {
-    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/aboutus.jpg');
+    background:  url('img/aboutus.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
