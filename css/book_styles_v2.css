@@ -1,0 +1,271 @@
+
+.contact-method-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contact-method-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#contact-time {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.appointment-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    background: #4CAF50;
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+}
+
+.step.active {
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.step::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    color: #666;
+}
+
+.form-section {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.service-options {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.service-option {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-option:hover {
+    background: #f9f9f9;
+}
+
+.service-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.service-option .duration {
+    margin-left: auto;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.nav-button,
+.submit-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.nav-button:hover {
+    background: #e0e0e0;
+}
+
+.submit-button {
+    background: #4CAF50;
+    color: white;
+}
+
+.submit-button:hover {
+    background: #45a049;
+}
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.form-group.error input {
+    border-color: #c62828;
+}
+
+.form-group.error label {
+    color: #c62828;
+}
+
+.confirmation-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.confirmation-message h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.review-section {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.review-section h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.terms-conditions {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.booking-confirmed-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeInOut 4s ease-in-out;
+}
+
+.booking-confirmed-message h2 {
+    margin-bottom: 10px;
+}
+
+.booking-confirmed-message p {
+    margin-bottom: 5px;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}

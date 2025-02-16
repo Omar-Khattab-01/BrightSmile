@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - BrightSmile Dental Clinic</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_nav.css">
+    <link rel="stylesheet" href="css/book_styles.css">
+    <link rel="stylesheet" href="css/book_styles_v2.css">
+
+<script src="js/booking.js" defer></script>
+<!-- <script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        // Collect form data
+        const formData = new FormData(event.target);
+        let appointmentDetails = '';
+        
+        for (let [key, value] of formData.entries()) {
+            if (value && key !== 'terms') {
+                let formattedKey = key.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
+                appointmentDetails += `<strong>${formattedKey}:</strong> ${value}<br>`;
+            }
+        }
+
+        // Create and show the animated message
+        const message = document.createElement('div');
+        message.className = 'booking-confirmed-message';
+        message.innerHTML = `
+            <h2>Booking Confirmed!</h2>
+            <p>Thank you for booking your appointment with Bright Smile Clinic.</p>
+            <p>We've sent a confirmation email with your appointment details.</p>
+            <h3>Appointment Details:</h3>
+            <p>${appointmentDetails}</p>
+        `;
+        document.body.appendChild(message);
+
+
+        // Set a timer to remove the message
+        let removeTimeout = setTimeout(() => {
+            document.body.removeChild(message);
+        }, 7000);
+
+        // Prevent message from disappearing when hovered
+        message.addEventListener('mouseenter', () => {
+            clearTimeout(removeTimeout);
+        });
+
+        // Allow message to disappear when not hovered
+        message.addEventListener('mouseleave', () => {
+            removeTimeout = setTimeout(() => {
+                document.body.removeChild(message);
+            }, 7000);
+        })
+
+        // Reset the form
+        event.target.reset();
+
+        // Reset progress bar and go back to first step
+        document.querySelectorAll('.step').forEach((step, index) => {
+            step.classList.toggle('active', index === 0);
+        });
+        document.querySelectorAll('.form-section').forEach((section, index) => {
+            section.classList.toggle('active', index === 0);
+        });
+
+        // Reset the progress bar width
+        const progress = document.querySelector('.progress');
+        if (progress) {
+            progress.style.width = '0%';
+        }
+
+        // Reset the current step
+        currentStep = 0;
+    }
+</script> -->
+</head>
+<body id="book">
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="BrightSmile Logo">
+            </div>
+            <nav>
+                <div class="nav-center">
+                    <ul class="main-nav">
+                        <li><a href="Homepage.html">Home</a></li>
+                        <li><a href="AboutUs.html">About</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="ContactUs.html">Contact</a></li>
+                        <li><a href="Tips.html">Tips</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a href="Book.html" class="book-button">Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+<main>
+    <h1 style="text-align: center; color: #333; margin: 2rem 0; font-size: 2.5rem; font-weight: 600;">Book an Appointment</h1>
+    <form class="appointment-form" id="bookingForm" onsubmit="handleFormSubmit(event)">
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="steps-container">
+                <div class="step active">Service</div>
+                <div class="step">Personal Info</div>
+                <div class="step">Contact Preferences</div>
+                <div class="step">Confirmation</div>
+            </div>
+        </div>
+        <div class="form-section active" id="service">
+            <div class="form-group">
+            <label for="service">Service:</label>
+            <select id="service-type" name="service" required>
+                <option value="">Select a service</option>
+                <option value="consultation">Consultation</option>
+                <option value="Initial-Oral-Examination">Initial Oral Examination</option>
+                <option value="teeth-cleaning">Teeth Cleaning</option>
+                <option value="Dental-Filling">Dental Filling</option>
+                <option value="Teeth-Whitening">Teeth Whitening</option>
+                <option value="Dental-Crowns">Dental Crowns</option>
+                <option value="Dental-Bridges">Dental Bridges</option>
+                <option value="Root-Canal-Therapy">Root Canal Therapy</option>
+                <option value="Dental-Implants">Dental Implants</option>
+                <option value="Orthodontic-Services">Orthodontic Services</option>
+            </select>
+            <p>
+
+            </p>
+            
+            <button type="button" class="nav-button next">Next</button>
+            
+        </div>
+            
+        </div>
+        
+        
+        <div class="form-section" id="personal-info">
+            
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" required placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" required placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <button type="button" class="nav-button next">Next</button>
+        </div>
+        <!-- <div class="form-section" id="service">
+            <h3>Service</h3>
+            <div class="form-group">
+                <label for="service">Service:</label>
+                <input type="text" id="service" name="service" readonly>
+            </div>
+        </div> -->
+
+        <div class="form-section" id="contact-preferences">
+            <h3>Contact Preferences</h3>
+            <div class="form-group">
+                <label for="email-updates">
+                    <input type="checkbox" id="email-updates" name="email_updates">
+                    I would like to receive emails about reminders and recent offers
+                </label>
+            </div>
+            <div class="form-group">
+                <label>Preferred Contact Method:</label>
+                <div class="contact-method-options">
+                    <label>
+                        <input type="radio" name="contact_method" value="phone" required>
+                        Phone
+                    </label>
+                    <label>
+                        <input type="radio" name="contact_method" value="email" required>
+                        Email
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contact-time">Preferred Contact Time:</label>
+                <select id="contact-time" name="contact_time" required>
+                    <option value="">Select a time</option>
+                    <option value="morning">Morning (9AM - 12PM)</option>
+                    <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                    <option value="evening">Evening (5PM - 8PM)</option>
+                </select>
+            </div>
+            <div class="nav-buttons">
+                <button type="button" class="nav-button prev">Previous</button>
+                <button type="button" class="nav-button next">Next</button>
+            </div>
+        </div>
+
+        <div class="form-section" id="confirmation">
+            <div class="confirmation-content">
+                <h3>Please Review Your Information</h3>
+                <div class="review-info"></div>
+            </div>
+            <div class="nav-buttons">
+                <button type="button" class="nav-button prev">Previous</button>
+                <button type="submit" class="submit-button">Confirm Booking</button>
+            </div>
+        </div>
+    </form>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Bright Smile Logo">
+        </div>
+        <div class="footer-services">
+            <h1>Location</h1>
+            <p style="color: rgb(255, 255, 255);">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=200+Garrity+Crescent,+Ottawa,+ON+K1N+1J8" target="_blank">
+                    200 Garrity Crescent,<br>Ottawa, ON K1N 1J8
+                </a>
+            </p>
+            <h1>Phone</h1>
+            <p style="color: rgb(255, 255, 255);">
+                <a href="tel:+16136893450">+1 613-689-3450</a>
+            </p>
+        </div>
+        <div class="footer-links">
+            <h1 style="margin-right: 90px;">Quick Links</h1>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="Book.html">Book an Appointment</a></li>
+                <li><a href="Tips.html">Tips</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <h1 style="margin-right: 90px;">Stay Connected</h1>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/phone.png" alt="Phone"></a>
+            <a href="#"><img src="img/email.png" alt="Email"></a>
+        </div>
+        <div class="footer-rights">
+            © 2025 Bright Smile Clinic. All rights reserved.
+        </div>
+    </div>
+</footer>
+<script>
+   // Add this script to Book.html (just before closing body tag)
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceSelect = document.querySelector('#service-type'); // Make sure this matches your select element's ID
+    const selectedService = localStorage.getItem('selectedService');
+    
+    if (serviceSelect && selectedService) {
+        // Find and select the option that matches the selected service
+        const options = Array.from(serviceSelect.options);
+        const targetOption = options.find(option => 
+            option.text.toLowerCase() === selectedService.toLowerCase()
+        );
+        
+        if (targetOption) {
+            serviceSelect.value = targetOption.value;
+            // Trigger any necessary form updates or validation
+            serviceSelect.dispatchEvent(new Event('change'));
+        }
+        
+        // Clear the localStorage after using it
+        localStorage.removeItem('selectedService');
+    }
+});
+</script>
+</body>
+</html>

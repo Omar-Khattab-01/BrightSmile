@@ -1,0 +1,54 @@
+/* Responsive styles for About Us page */
+@media screen and (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon-container {
+        margin-bottom: 20px;
+    }
+
+    main section h1::after, main section h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section, .mission-section, .services-section, 
+    .community-section, .join-family-section, .contact-us-section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    main section h1, main section h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Print styles */
+@media print {
+    .icon-container, .cta-button {
+        display: none;
+    }
+
+    main section {
+        break-inside: avoid;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

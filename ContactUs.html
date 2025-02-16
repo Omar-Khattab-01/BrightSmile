@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BrightSmile Dental Clinic</title>
+    <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_nav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body id="contact">
+    
+        
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="BrightSmile Logo">
+            </div>
+            <nav>
+                <div class="nav-center">
+                    <ul class="main-nav">
+                        <li><a href="Homepage.html">Home</a></li>
+                        <li><a href="AboutUs.html">About</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="ContactUs.html">Contact</a></li>
+                        <li><a href="Tips.html">Tips</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a href="Book.html" class="book-button">Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!--     <h1 style="text-align: center; margin-bottom: 0px;">Contact Us</h1>
+-->
+<main>
+    <section class="contact-intro">
+        <h1><i class="fas fa-comments"></i> Contact Us</h1>
+        <p>Experience Excellence in Dental Care at BrightSmile Clinic</p>
+        <p>Your journey to a perfect smile begins here. Our dedicated team is ready to assist you with any questions or concerns.</p>
+        <div class="contact-details">
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 200 Garrity Crescent, Ottawa, ON K1N 1J8</p>
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> Appointments: +1 613-689-3450</p>
+            <p><i class="fas fa-info-circle"></i> <strong>Inquiries:</strong> +1 613-689-3451</p>
+            <p><i class="fas fa-ambulance"></i> <strong>Emergencies:</strong> +1 613-689-3452</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> 
+                <a href="mailto:info@brightsmiledental.com">info@brightsmiledental.com</a>, 
+                <a href="mailto:support@brightsmiledental.com">support@brightsmiledental.com</a>
+            </p>
+        </div>
+        <!-- <div class="map-container">
+            <a href="https://maps.google.com/?q=200+Garrity+Crescent,+Ottawa,+ON+K1N+1J8" target="_blank">
+                <img src="/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/map.jpg" alt="Bright Smile Clinic Location Map">
+            </a>
+        </div> -->
+        <div style="width: 100%"><iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=200%20garrity%20crescent+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">cat gps tracker</a></iframe></div>    </section>
+    <section class="operating-hours">
+        <h2><i class="far fa-clock"></i> Operating Hours</h2>
+        <div class="hours-grid">
+            <div class="hours-item">
+                <span class="day">Monday - Friday:</span>
+                <span class="time">8:00 AM - 8:00 PM</span>
+            </div>
+            <div class="hours-item">
+                <span class="day">Saturday:</span>
+                <span class="time">9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="hours-item">
+                <span class="day">Sunday:</span>
+                <span class="time">Closed</span>
+            </div>
+        </div>
+    </section>
+    <section class="emergency-contact">
+        <h2><i class="fas fa-exclamation-circle"></i> Emergency Care</h2>
+        <div class="emergency-wrapper">
+            <div class="emergency-info">
+                <p>If you're experiencing a dental emergency, we're here to help 24/7.</p>
+                <p>Call our emergency line: <strong><i class="fas fa-phone-alt"></i> +1 613-689-3452</strong></p>
+                <div class="emergency-examples">
+                    <h3>Common Dental Emergencies:</h3>
+                    <ul>
+                        <li><i class="fas fa-tooth"></i> Severe Toothache</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> Knocked Out Tooth</li>
+                        <li><i class="fas fa-clock"></i> Lost Filling or Crown</li>
+                        <li><i class="fas fa-band-aid"></i> Bleeding or Swollen Gums</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="emergency-actions">
+                <a href="tel:+16136893452" class="emergency-call-btn">
+                    <i class="fas fa-phone"></i> Call Emergency Line
+                </a>
+                <a href="Book.html" class="emergency-book-btn">
+                    <i class="fas fa-calendar-plus"></i> Book Urgent Care
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" action="submit_contact_form.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="appointment">Appointment Query</option>
+                <option value="services">Services Information</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+            
+            <div class="submit-wrapper">
+                <button type="submit" class="submit-btn">
+                    Send Message
+                    <div class="loader"></div>
+                    <i class="fas fa-check success-checkmark"></i>
+                </button>
+                <div class="tooltip">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="tooltiptext">All fields marked with * are required</span>
+                </div>
+            </div>
+        </form>
+        
+        <script>
+            $(document).ready(function() {
+                // Form validation and interactive feedback
+                $('#contactForm').on('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simple validation
+                    let isValid = true;
+                    
+                    if($('#name').val().length < 2) {
+                        alert('Please enter a valid name');
+                        isValid = false;
+                    }
+                    
+                    if(!isValidEmail($('#email').val())) {
+                        alert('Please enter a valid email address');
+                        isValid = false;
+                    }
+                    
+                    if($('#message').val().length < 10) {
+                        alert('Please enter a message with at least 10 characters');
+                        isValid = false;
+                    }
+                    
+                    if(isValid) {
+                        showLoading();
+                        
+                        // Simulate server request
+                        setTimeout(() => {
+                            showSuccess();
+                            this.reset();
+                        }, 1500);
+                    }
+                });
+                
+                // Email validation helper function
+                function isValidEmail(email) {
+                    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return regex.test(email);
+                }
+
+                // Show loading state
+                function showLoading() {
+                    $('.submit-btn').prop('disabled', true);
+                    $('.loader').css('display', 'inline-block');
+                    $('.success-checkmark').hide();
+                }
+
+                // Show success state
+                function showSuccess() {
+                    $('.loader').hide();
+                    $('.success-checkmark').css('display', 'inline-block');
+                    setTimeout(() => {
+                        $('.success-checkmark').fadeOut();
+                        $('.submit-btn').prop('disabled', false);
+                    }, 2000);
+                }
+                
+                // Interactive form elements
+                $('input, textarea').focus(function() {
+                    $(this).addClass('active');
+                }).blur(function() {
+                    $(this).removeClass('active');
+                });
+            });
+        </script>
+    </section>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Bright Smile Logo">
+        </div>
+        <div class="footer-services">
+            <h1>Location</h1>
+            <p style="color: rgb(255, 255, 255);">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=200+Garrity+Crescent,+Ottawa,+ON+K1N+1J8" target="_blank">
+                    200 Garrity Crescent,<br>Ottawa, ON K1N 1J8
+                </a>
+            </p>
+            <h1>Phone</h1>
+            <p style="color: rgb(255, 255, 255);">
+                <a href="tel:+16136893450">+1 613-689-3450</a>
+            </p>
+        </div>
+        <div class="footer-links">
+            <h1 style="margin-right: 90px;">Quick Links</h1>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="Book.html">Book an Appointment</a></li>
+                <li><a href="Tips.html">Tips</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <h1 style="margin-right: 90px;">Stay Connected</h1>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/phone.png" alt="Phone"></a>
+            <a href="#"><img src="img/email.png" alt="Email"></a>
+        </div>
+        <div class="footer-rights">
+            © 2025 Bright Smile Clinic. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

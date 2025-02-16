@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - BrightSmile Dental Clinic</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_nav.css">
+<!--    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+ -->    <link rel="stylesheet" href="css/services_styles_v2.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="js/services_script.js" defer></script>
+</head>
+<body id="services">
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="BrightSmile Logo">
+            </div>
+            <nav>
+                <div class="nav-center">
+                    <ul class="main-nav">
+                        <li><a href="Homepage.html">Home</a></li>
+                        <li><a href="AboutUs.html">About</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="ContactUs.html">Contact</a></li>
+                        <li><a href="Tips.html">Tips</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a href="Book.html" class="book-button">Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!--     <h1 style="text-align: center; margin-bottom: 0px;">Our Services</h1>
+ -->
+ <main>
+    <h1 class="services-title">Our Services</h1>
+    
+    <div class="services-container">
+        <div class="service-item" data-aos="fade-up" data-aos-delay="0" data-service="Initial Oral Examination">
+            <h2>Initial Oral Examination</h2>
+            <p>Includes a visual examination, charting, periodontal probing, diagnosis, and treatment recommendations.</p>
+            <p><strong>Price:</strong> $75 CAD</p>
+            <p><strong>Payment Options:</strong> Installments available, inquire for details.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="100" data-service="Initial Oral Examination">
+            <h2>Teeth Cleaning</h2>
+            <p>Professional cleaning services include scaling, root planing, and polish.</p>
+            <p><strong>Price:</strong> $90 CAD</p>
+            <p class="special-note"><strong>Discounts:</strong> 10% off for seniors and students.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="200" data-service="Initial Oral Examination">
+            <h2>Dental Fillings</h2>
+            <p>Tooth-colored composite fillings for cavities or damaged teeth.</p>
+            <p><strong>Price:</strong> $100 - $180 CAD per filling</p>
+            <p><strong>Payment Options:</strong> Flexible payment plans available.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="300" data-service="Initial Oral Examination">
+            <h2>Teeth Whitening</h2>
+            <p>In-office bleaching procedure for a brighter, whiter smile.</p>
+            <p><strong>Price:</strong> $250 CAD</p>
+            <p class="special-note"><strong>Special Offer:</strong> 15% discount on your first whitening session.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="400" data-service="Initial Oral Examination">
+            <h2>Dental Crowns</h2>
+            <p>Porcelain or ceramic crowns customized to cover and protect damaged teeth.</p>
+            <p><strong>Price:</strong> $600 - $800 CAD per crown</p>
+            <p><strong>Payment Options:</strong> Interest-free installments available over 6 months.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="500" data-service="Initial Oral Examination">
+            <h2>Dental Bridges</h2>
+            <p>Natural-looking replacements for missing teeth anchored by neighboring teeth.</p>
+            <p><strong>Price:</strong> $500 - $900 CAD per unit</p>
+            <p><strong>Payment Options:</strong> Installments available, inquire for details.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="600" data-service="Initial Oral Examination">
+            <h2>Root Canal Therapy</h2>
+            <p>Treatment for infected or diseased tooth pulp, includes cleaning and sealing the tooth.</p>
+            <p><strong>Price:</strong> $600 - $850 CAD</p>
+            <p><strong>Payment Options:</strong> Installments available, inquire for details.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="700" data-service="Initial Oral Examination">
+            <h2>Dental Implants</h2>
+            <p>Surgical placement of a dental implant to replace missing teeth, providing support for crowns or bridges.</p>
+            <p><strong>Price:</strong> $1,800 - $2,200 CAD per implant</p>
+            <p><strong>Payment Options:</strong> Installments available, inquire for details.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="800" data-service="Initial Oral Examination">
+            <h2>Orthodontic Services</h2>
+            <p>Including traditional braces and clear aligners for teeth alignment.</p>
+            <p><strong>Price:</strong> $2,500 - $4,500 CAD</p>
+            <p><strong>Payment Options:</strong> Installments available, inquire for details.</p>
+        </div>
+    </div>
+    <p class="services-footer">At Bright Smile Dental, we pride ourselves on offering affordable dental care without compromising on quality. Our team of experienced professionals is dedicated to providing you with exceptional care. If you find a lower price at another local clinic, we'll match it and offer an additional 5% discount. Contact us today to learn more about our services or schedule an appointment.</p>
+    <div class="services-actions">
+        <a href="Book.html" class="cta-button">Schedule an Appointment</a>
+        <a href="ContactUs.html" class="cta-button secondary">Contact Us</a>
+    </div>
+</main>
+<script>
+    // Event listeners for service buttons
+const serviceButtons = document.querySelectorAll('.service-item');
+serviceButtons.forEach(serviceButton => {
+    serviceButton.addEventListener('click', () => {
+        const selectedService = serviceButton.querySelector('h2').textContent;
+        localStorage.setItem('selectedService', selectedService);
+        window.location.href = 'Book.html';
+    });
+});
+
+// Handle form submission
+const form = document.querySelector('#services-form');
+if (form) { // Add null check
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        // Collect form data
+        const formData = new FormData(event.target);
+        const appointmentDetails = Array.from(formData.entries())
+            .filter(([key, value]) => value && key !== 'terms')
+            .map(([key, value]) => {
+                const formattedKey = key.replace('_', ' ')
+                    .replace(/\b\w/g, l => l.toUpperCase());
+                const formattedValue = value.trim();
+                return `<strong>${formattedKey}:</strong> ${formattedValue}<br>`;
+            })
+            .join('');
+
+        // Store selected service in local storage
+        localStorage.setItem('selectedService', appointmentDetails);
+
+        // Redirect to the booking page
+        window.location.href = 'Book.html';
+    });
+}
+
+</script>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Bright Smile Logo">
+        </div>
+        <div class="footer-services">
+            <h1>Location</h1>
+            <p style="color: rgb(255, 255, 255);">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=200+Garrity+Crescent,+Ottawa,+ON+K1N+1J8" target="_blank">
+                    200 Garrity Crescent,<br>Ottawa, ON K1N 1J8
+                </a>
+            </p>
+            <h1>Phone</h1>
+            <p style="color: rgb(255, 255, 255);">
+                <a href="tel:+16136893450">+1 613-689-3450</a>
+            </p>
+        </div>
+        <div class="footer-links">
+            <h1 style="margin-right: 90px;">Quick Links</h1>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="Book.html">Book an Appointment</a></li>
+                <li><a href="Tips.html">Tips</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <h1 style="margin-right: 90px;">Stay Connected</h1>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/phone.png" alt="Phone"></a>
+            <a href="#"><img src="img/email.png" alt="Email"></a>
+        </div>
+        <div class="footer-rights">
+            © 2025 Bright Smile Clinic. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+

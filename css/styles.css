@@ -1,0 +1,590 @@
+html, body {
+    height: 100%;  /* Ensure the full height is taken into account */
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #00acee;
+    padding: 20px 0;
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+body {
+    display: flex;
+    flex-direction: column;  /* Makes the body flex container with vertical direction */
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+}
+
+main section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 60px 40px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.meet-the-team {
+    background-color: #ffffff;
+    padding: 80px 40px;
+    margin: 60px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.meet-the-team h2 {
+    color: #00acee;
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.meet-the-team h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #00acee;
+    border-radius: 2px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.team-container article {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.team-container article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.team-container article:hover {
+    transform: translateY(-5px);
+}
+
+.team-container img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-bottom: 4px solid #00acee;
+    transition: all 0.3s ease;
+    filter: brightness(0.95);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.team-container img:hover {
+    transform: scale(1.05);
+}
+
+.team-container h3 {
+    color: #00acee;
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+.team-container p {
+    color: #666;
+    padding: 0 20px 20px;
+    line-height: 1.6;
+}
+
+.welcome h2 {
+    color: #00acee;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.services-highlight {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 50px 40px;
+    margin: 40px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.services-highlight h2 {
+    color: #00acee;
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.services-highlight h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #00acee;
+    border-radius: 2px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.services-container article {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 172, 238, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.services-container article:hover {
+    transform: translateY(-5px);
+}
+
+.services-container h3 {
+    color: #00acee;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.services-container p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.testimonials {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.testimonials blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #666;
+    line-height: 1.6;
+    position: relative;
+    padding: 20px 40px;
+}
+
+.testimonials blockquote::before {
+    content: '"';
+    font-size: 4em;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    color: #00acee;
+    opacity: 0.3;
+}
+
+.testimonials h2 {
+    color: #00acee;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+    position: relative;
+    padding: 20px 40px;
+}
+
+.news {
+    background-color: #f8f9fa;
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.news h2 {
+    color: #00acee;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.news article {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 172, 238, 0.1);
+}
+
+.news h3 {
+    color: #00acee;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.news p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.cta {
+    margin: 40px 0;
+    padding: 20px;
+}
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+
+.book-button:hover {
+    background-color: #0b0b0b;
+    color: rgb(15, 147, 183);
+}
+.cta .book-button {
+    display: inline-block;
+    width: auto;
+    min-width: 200px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cta .book-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 172, 238, 0.3);
+}
+
+nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; /* Ensures space between center and right sections */
+    align-items: center;
+    width: 100%;
+    margin-right: 149px;
+
+}
+
+.nav-center .main-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Centers the navigation menu */
+    display: inline-flex; /* Inline-flex keeps the list horizontal and centered */
+    margin-left: 200px;
+}
+
+.nav-right {
+    margin-right: 20px; /* Optional: Adjust spacing from the right edge */
+}
+
+.nav-center ul li {
+    padding: 0 15px; /* Spacing between menu items */
+}
+
+.nav-center ul li a, .nav-right a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px; /* Increased font size for better readability */
+    transition: color 0.3s;
+}
+
+.nav-center ul li a:hover, .nav-right a:hover {
+    color: #020202;
+}
+
+
+
+
+
+.slider, .welcome, .services-highlight, .testimonials, .news {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+}
+
+.services-container article, .news article {
+    margin-bottom: 15px;
+}
+
+.cta .book-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+/* Backgrounds for Each Page */
+#homepage, #services, #contact, #book, #aboutus {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.logo-container img {
+    width: 140px;  /* or any size you want */
+    height: 140px; /* must be equal to width to maintain circle shape */
+    border-radius: 50%; /* this creates the round shape */
+    object-fit: cover; /* this ensures the image covers the space without being distorted */
+    display: block;
+    margin-right: auto;
+    display: inline;
+    margin-left:40px;
+    
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+footer {
+    background-color: #00acee;
+    color: white;
+    padding: 20px 10px;
+    width: 100%;
+    position: relative;  /* Changed from absolute if overlapping issue persists */
+}
+
+.footer-services a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+.footer-services a:hover {
+    color: #e6f7ff; /* Lightens the link color on hover for a subtle effect */
+}
+
+/* This ensures that the footer remains at the bottom */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 20px;
+}
+
+
+.footer-links a {
+    text-decoration: none; /* Removes underline from links */
+    color: rgb(0, 0, 0); /* Sets the text color to white */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 16px; /* Adjusts the text size */
+    transition: color 0.3s; /* Smooth transition for color change on hover */
+}
+
+.footer-links a:hover {
+    color: #e6f7ff; /* Lightens the link color on hover for a subtle effect */
+}
+
+
+.footer-logo img {
+    width: 100px; /* Adjust size as needed */
+}
+.footer-socials img {
+    width: 40px;
+    height: auto;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.2);
+}
+.footer-services p, .footer-links ul, .footer-socials a {
+    margin: 0;
+    padding: 0;
+    color: black;
+    
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 10px; /* Adds spacing between the links */
+}
+
+.footer-rights {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    bottom: 10px; /* Adjust as needed */
+    font-size: 12px;
+    color: white; /* or any other color you prefer */
+}
+
+
+/* Adjustments for responsive behavior */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-social a {
+        margin: 0 5px; /* Smaller margin for smaller screens */
+    }
+}
+
+
+/* Specific Backgrounds for Each Page with Grey Opacity Overlay */
+#homepage, #services, #contact, #book, #aboutus {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#homepage {
+    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/homepage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+#services {
+    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/services.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#contact {
+    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#book {
+    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/book.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#aboutus {
+    background:  url('/Users/omarkhattab/Desktop/SEG3185/project1/BrightSmile/imgs/aboutus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.read-more-link {
+    display: inline-block;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}
