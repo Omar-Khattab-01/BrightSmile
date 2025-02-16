@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <p><strong>Phone:</strong> ${document.getElementById('phone').value}</p>
             <p><strong>Contact Time:</strong> ${document.getElementById('contact-time').value}</p>
             <p><strong>Service:</strong> ${document.getElementById('service-type').value}</p>
-            <p><strong>Email Updates:</strong> ${document.getElementById('email-updates').checked ? 'Yes' : 'No'}</p>
         `;
     }
 
