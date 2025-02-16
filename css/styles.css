@@ -544,35 +544,35 @@ footer {
 }
 
 #homepage {
-    background:  url('img/homepage.jpg');
+    background:  url('../img/homepage.jpg');
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
 }
 
 #services {
-    background:  url('img/services.jpg');
+    background:  url('../img/services.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #contact {
-    background:  url('img/contact.jpg');
+    background:  url('../img/contact.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #book {
-    background:  url('img/book.jpg');
+    background:  url('../img/book.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #aboutus {
-    background:  url('img/aboutus.jpg');
+    background:  url('../img/Aboutus.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
