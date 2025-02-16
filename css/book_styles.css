@@ -90,13 +90,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
 }
 
-.progress {
-    position: absolute;
-    height: 100%;
-    background: linear-gradient(90deg, #4CAF50, #81C784); /* Gradient for a modern look */
-    transition: width 0.3s ease;
-    border-radius: 10px; /* Match the border radius of the container */
-}
+
 
 .steps-container {
     display: flex;
