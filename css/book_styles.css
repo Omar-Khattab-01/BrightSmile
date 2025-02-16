@@ -110,6 +110,7 @@
 
 .step::before {
     margin-top: 20px;
+    
     content: '';
     position: absolute;
     top: -10px;
